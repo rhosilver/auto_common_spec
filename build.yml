@@ -59,4 +59,4 @@ wm:
 #capabilities:
 #- non_motorola_device
 
-#extensions: ["genPropBag", "logCapture"]
+extensions: ["logCapture"]
