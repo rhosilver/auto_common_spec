@@ -40,7 +40,7 @@ iphone:
   codesignidentity: "iPhone Developer: Sunil Kumar (W8L77BLH6N)"
   BundleIdentifier: "com.rhomobile.apigeneratorspec"
   BundleURLScheme: "apigeneratorspec"
-  extensions: ["nativeBridgeTest", "barcode", "genCallbackTests", "appEvents", "indicators", "sensor", "screenorientation", "audiocapture"]
+  extensions: ["nativeBridgeTest", "genCallbackTests", "appEvents", "sensor", "screenorientation", "audiocapture"]
 wp:
   productid: 'b6479381-42a8-0130-78de-3caec51bd50e'
 symbian:
