@@ -20,7 +20,7 @@ describe("KeyCapture JS API", function()
 		});
 	});
 
-	if (!isWindowsMobilePlatform) //putting check for WM because of issues in instumentation API for WM
+	if (!isWindwosMobilePlatform()) //putting check for WM because of issues in instumentation API for WM
 	{
 		if(!hardwareKeysTest.isAndroid())//Android doesnt do home key it seems
 		{
@@ -103,7 +103,7 @@ describe("KeyCapture JS API", function()
 		}
 	}
 
-	if (!isWindowsMobilePlatform) //putting check for WM because of issues in instumentation API for WM
+	if (!isWindwosMobilePlatform()) //putting check for WM because of issues in instumentation API for WM
 	{		
 		describe("captureKey", function()
 		{
@@ -810,7 +810,7 @@ describe("KeyCapture JS API", function()
 			});
 		});
 	}
-	if (!isWindowsMobilePlatform) //putting check for WM because of issues in instumentation API for WM
+	if (!isWindwosMobilePlatform()) //putting check for WM because of issues in instumentation API for WM
 	{			
 		describe("Remap", function()
 		{
@@ -1081,7 +1081,7 @@ describe("KeyCapture JS API", function()
 		});
 	}
 
-	if (!isWindowsMobilePlatform) //putting check for WM because of issues in instumentation API for WM
+	if (!isWindwosMobilePlatform()) //putting check for WM because of issues in instumentation API for WM
 	{
 		if (isWindowsMobileOrAndroidPlatform() && Rho.System.isMotorolaDevice == true) 
 		{
