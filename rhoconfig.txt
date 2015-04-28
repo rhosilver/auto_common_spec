@@ -90,7 +90,4 @@ splash_screen='zoom'
 # properties for spec testing
 intProp = 42
 stringProp = 'abc' 
-#Per_App_VPN_Enable_Setting
-ios_net_curl = 0
 
-ios_direct_local_requests = 1
