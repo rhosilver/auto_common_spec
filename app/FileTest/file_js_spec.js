@@ -1,8 +1,8 @@
 describe("RMS 4.0 File JS API", function () {
 
 	var userFolder = Rho.Application.userFolder;
-	var publicFolder = Rho.RhoFile.join(Rho.Application.publicFolder);
-    var temporaryDirectory = Rho.RhoFile.join(Rho.Application.userFolder, "temporaryDirectory");
+	var publicFolder = Rho.Application.publicFolder;
+    	var temporaryDirectory = Rho.RhoFile.join(Rho.Application.userFolder, "temporaryDirectory");
 
 	var fileName = "rhoconfig.txt";
 	var testReadPath = Rho.RhoFile.join(Rho.Application.appsBundleFolder, "rhoconfig.txt");
