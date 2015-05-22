@@ -22,7 +22,7 @@ describe("Camera JS API Test", function() {
 			var camname = enumObject.getProperty('cameraType');
 			var camtype = enumObject.getProperty('ID');
 		
-			xdescribe("Camera default check", function() {
+			describe("Camera default check", function() {
 				it("Call getDefault |" + camtype, function() {
 				    Rho.Camera.setDefault(enumObject);
 				    defaultobj = Rho.Camera.getDefault();
@@ -76,7 +76,7 @@ describe("Camera JS API Test", function() {
            	});
 
 	    	if(isWindowsMobilePlatform()){
-				xdescribe("Call capture method with callback | "+ camtype +": "+ camname, function() {
+				describe("Call capture method with callback | "+ camtype +": "+ camname, function() {
 					var capturedata = {};
 					var capturestatus = false;
 					enumObject.previewTop = 20;
@@ -279,7 +279,7 @@ describe("Camera JS API Test", function() {
 				});
 			};
 
-			xdescribe("Camera property using set/getProperty for "+ camtype +": "+ camname, function() {
+			describe("Camera property using set/getProperty for "+ camtype +": "+ camname, function() {
 				for (var i=0;i<arrCamera.length;i++){
 					(function(idx){
 						it(arrCamera[idx]['testName'], function() {
@@ -291,7 +291,7 @@ describe("Camera JS API Test", function() {
 				};
 			});
 
-			xdescribe("Camera property Using set/getProperties for "+ camtype +": "+ camname, function() {
+			describe("Camera property Using set/getProperties for "+ camtype +": "+ camname, function() {
 				for (var i=0;i<arrCamera.length;i++){
 					(function(idx){
 						it(arrCamera[idx]['testName'], function() {
@@ -320,7 +320,7 @@ describe("Camera JS API Test", function() {
 				};
 			});
 
-			xdescribe("Camera property setting Directly for "+ camtype +": "+ camname, function() {
+			describe("Camera property setting Directly for "+ camtype +": "+ camname, function() {
 
 				for (var i=0;i<arrCamera.length;i++){
 					(function(idx){
@@ -437,22 +437,24 @@ describe("Camera JS API Test", function() {
 				});
 				it("Call getAllProperties with Anonymous callback |" + camtype, function() {
 					runs(function() {
-					    //enumObject.setProperties({'compressionFormat':'jpg','desiredHeight':640,'outputFormat':'dataUri'});
-						getpropertydata = enumObject.getAllProperties();
+					    enumObject.setProperties({'compressionFormat':'jpg','desiredHeight':640,'outputFormat':'dataUri'});
+						enumObject.getAllProperties(function(data){
+							getpropertydata = JSON.stringify(data);
+							callbackstatus = true;
+						});
 					});
-					// waitsFor(function(){
-					// 	return callbackstatus;
-					// },2000);	
+					waitsFor(function(){
+						return callbackstatus;
+					},2000);	
 					runs(function(){
-						alert(JSON.stringify(getpropertydata));
-						//expect(getpropertydata).toContain('jpg');
+						expect(getpropertydata).toContain('jpg');
 						//expect(getpropertydata).toContain(640);
-						//expect(getpropertydata).toContain('dataUri');
+						expect(getpropertydata).toContain('dataUri');
 					});								
 				});
 			});
 
-			xdescribe("Properties with constants ", function() {
+			describe("Properties with constants ", function() {
 				it("Should set flashMode to FLASH_ON using direct calling method", function() {
 				    enumObject.flashMode = Rho.Camera.FLASH_ON;
 				    expect(enumObject.flashMode).toEqual("on");
