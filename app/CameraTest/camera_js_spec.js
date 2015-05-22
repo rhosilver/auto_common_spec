@@ -437,7 +437,7 @@ describe("Camera JS API Test", function() {
 				});
 				it("Call getAllProperties with Anonymous callback |" + camtype, function() {
 					runs(function() {
-					    enumObject.setProperties({'compressionFormat':'jpg','desiredHeight':640,'outputFormat':'dataUri'});
+					    //enumObject.setProperties({'compressionFormat':'jpg','desiredHeight':640,'outputFormat':'dataUri'});
 						getpropertydata = enumObject.getAllProperties();
 					});
 					// waitsFor(function(){
