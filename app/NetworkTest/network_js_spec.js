@@ -98,6 +98,7 @@ describe('Network JS API', function() {
             console.log("Network callback");
         };
         Rho.Network.stopDetectingConnection(netCB);
+        sleep(10000);
     });
 
     it('check available hosts', function(){
@@ -225,7 +226,7 @@ describe('Network JS API', function() {
                 }
                 expect(callbackCount).toEqual(1);
                 expect(connectionInfo).toEqual("Connected");
-                Rho.Network.stopDetectingConnection(stopCB);
+                //Rho.Network.stopDetectingConnection(stopCB);
             });
         });
 
