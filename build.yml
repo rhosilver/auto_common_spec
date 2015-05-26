@@ -8,11 +8,6 @@ applog: rholog.txt
 iphone:
   configuration: "Release"
   sdk: "iphoneos8.2"
-  provisionprofile: "iOS Team Provisioning Profile"
-  production:
-    mobileprovision_file: "./production/iOS_Team_Provisioning_Profile.mobileprovision"
-    certificate_file: "./production/Certificatesnew.p12"
-    certificate_password: "Rhoelements10"
   entitlements: ./production/Entitlements.plist
   codesignidentity: "iPhone Developer"
   BundleIdentifier: "com.rhomobile.autocommonspec"
