@@ -88,6 +88,7 @@ describe("Application JS API", function () {
 	        var result = Rho.Application.startURI;
 			Rho.Log.info(" Rho.Application.startURI = " + result, "App");
  			expect(result).toEqual('index.html');
+            Rho.Application.startURI = '/app/index.html';
 	    });
 	
 	    it("Test settingsPageURI property", function () {
@@ -307,7 +308,7 @@ describe("Application JS API", function () {
 	        it("Property 'badLinkURI'", function () {
 	        	var badlink_uri = Rho.Application.badLinkURI;
 				badlink_uri = badlink_uri.split("file://")[1];
-				alert(badlink_uri);
+				//alert(badlink_uri);
 	        	expect(badlink_uri).toMatch(/BadLink.html/);
 	        	expect(Rho.RhoFile.isFile(badlink_uri)).toBeTruthy();
 	        });
