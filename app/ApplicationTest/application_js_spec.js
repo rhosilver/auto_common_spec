@@ -39,7 +39,7 @@ describe("Application JS API", function () {
 
     });
 
-	xdescribe("Basic specs", function () {
+	describe("Basic specs", function () {
 		
 	    it("Test appBundleFolder property", function () {
 	        var result = Rho.Application.appBundleFolder;
@@ -173,7 +173,7 @@ describe("Application JS API", function () {
 	});
 	
 
-	xdescribe('Events specs', function() {
+	describe('Events specs', function() {
     if (isApplePlatform()) {
         beforeEach(function() {
             Rho.AppEvents.simulateEvent(Rho.AppEvents.APP_EVENT_ACTIVATED);
