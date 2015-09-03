@@ -3318,10 +3318,10 @@ var getApplicableProperties = function (objScnType){
 	var finalSCNObj = [];
 	
 	//Consumer Android
-	if(isAndroid && Rho.System.deviceName.indexOf('Motorola Solutions') == -1)
+/*	if(isAndroid && Rho.System.deviceName.indexOf('Motorola Solutions') == -1)
 	{
 		return;
-	}
+	}*/
 
 	for (var i = 0; i < arr_scanner_property.length ; i++){
 

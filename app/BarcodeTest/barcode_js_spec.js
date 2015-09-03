@@ -25,10 +25,10 @@ if(barcodeNotSupportedDevices.indexOf(Rho.System.deviceName) == -1){
 
 		(function(enumObject,arrScanner){
 			
-			if(isAndroid && Rho.System.deviceName.indexOf('Motorola Solutions') == -1)
+	/*		if(isAndroid && Rho.System.deviceName.indexOf('Motorola Solutions') == -1)
 			{
 				return;
-			}
+			}*/
 	
 			var scnname = enumObject.getProperty('friendlyName');
 			var scnid = enumObject.getProperty('ID');
